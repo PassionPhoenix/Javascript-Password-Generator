@@ -48,7 +48,7 @@ function writePassword() {
             result += allChars[random];
             }
             
-
+            return result
     }
 
     var password = generatePassword();
