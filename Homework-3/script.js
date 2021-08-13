@@ -1,20 +1,19 @@
 var generateBtn = document.querySelector("#generate");
-var abcUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var abcUpperArr = abcUpper.split("");
-var abcLower = "abcdefghijklmnopqrstuvwxyz";
-var abcLowerArr = abcLower.split("");
-var num = "0123456789";
-var numArr = num.split("");
-var sym = "!#$%&()*+,-./:;<=>?@^[]^_`{|}~";
-var symArr = sym.split("");
+var abcUpperArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var abcLowerArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var numArr = ["0","1","2","3","4","5","6","7","8","9"];
+var symArr = ["!","#","$","%","&","(",")",",","*","+","-",".","/",":",";","<","=",">","?","@","^","[","]","^","_","`","{","|","}","~"];
 
 
 
 function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
 
     function generatePassword(){
         var allChars = [];
-        var result = ""
+        var result = []
         var Length = parseInt(prompt("Enter Password Length"))
         var Upper = prompt("Include Upper Case?\n Enter Yes to validate")
         var Lower = prompt("Include Lower Case?\n Enter Yes to validate")
@@ -48,11 +47,8 @@ function writePassword() {
             result += allChars[random];
             }
             
-            return result
+            return result;
     }
-
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
 
 
     passwordText.value = password;
