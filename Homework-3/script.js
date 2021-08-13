@@ -27,19 +27,19 @@ function writePassword() {
         else(Length > 8 && Length < 129)
 
             if (Upper.toLowerCase() === "yes"){
-                allChars += abcUpperArr
+                allChars = allChars.concat(abcUpperArr);
             }
 
             if (Lower.toLowerCase() === "yes"){
-                allChars += abcLowerArr
+                allChars = allChars.concat(abcLowerArr);
             }
 
             if (Numbers.toLowerCase() === "yes"){
-                allChars += numArr
+                allChars = allChars.concat(numArr);
             }
 
             if (Symbols.toLowerCase() === "yes"){
-                allChars += symArr
+                allChars = allChars.concat(symArr)
             }
 
             for(i = 0; i < Length; i++){
