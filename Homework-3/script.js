@@ -43,13 +43,12 @@ function writePassword() {
                 allChars += symArr
             }
 
-            for(i = 0; i < 0; i++){
+            for(i = 0; i < Length; i++){
             var random = Math.floor(Math.random()*allChars.length);
-            password += allChars[random];
+            result += allChars[random];
             }
             
-            
-            return password
+
     }
 
     var password = generatePassword();
